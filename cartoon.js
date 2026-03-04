@@ -46,14 +46,19 @@ ctx.font = "18px Arial";
 ctx.fillText("David's Cartoon", 200, 30);
 
 //translate
-for (let i = 0; i < 9; i++) {
+for (let i = 0; i < 10; i++) {
     ctx.save();
-    ctx.translate(i * 60, 280);
-    ctx.beginPath();
-    ctx.moveTo(10, 20);
-    ctx.lineTo(15, 0);
-    ctx.lineTo(20, 20);
-    ctx.stroke();
+    ctx.translate(i * 55, 260);
+    
+    // Fence post
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, 10, 30);
+    ctx.strokeRect(0, 0, 10, 30);
+    
     ctx.restore();
 }
+
+// Horizontal rail across all posts
+ctx.fillStyle = "white";
+ctx.fillRect(0, 268, canvas.width, 5);
 
