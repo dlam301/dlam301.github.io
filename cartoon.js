@@ -46,9 +46,9 @@ ctx.font = "18px Arial";
 ctx.fillText("David's Cartoon", 200, 30);
 
 //translate
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 11; i++) {
     ctx.save();
-    ctx.translate(i * 55, 260);
+    ctx.translate(i * 55, 300);
     
     // Fence post
     ctx.fillStyle = "white";
