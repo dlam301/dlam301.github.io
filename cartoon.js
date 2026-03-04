@@ -60,5 +60,5 @@ for (let i = 0; i < 11; i++) {
 
 // Horizontal rail across all posts
 ctx.fillStyle = "white";
-ctx.fillRect(0, 268, canvas.width, 5);
+ctx.fillRect(0, 308, canvas.width, 5);
 
