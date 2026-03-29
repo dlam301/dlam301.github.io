@@ -7,7 +7,7 @@ function speak(text) {
 
 function showSentence() {
     const wordMenu = document.getElementById("wordMenu");
-    const sentenceBox = document.getelementById("sentenceBox");
+    const sentenceBox = document.getElementById("sentenceBox");
 
     if(wordMenu.selectedIndex > 0) {
         const selectedWord = wordMenu.options[wordMenu.selectedIndex];
