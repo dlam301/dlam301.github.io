@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8" />
+    <Title> Multimedia Dictionary: Jets Parts</Title>
+</head>
+<body>
+    <h1> Multimedia Dictionary: Jet Parts</h1>
 
+    <select id = "wordMenu" onchange = "showSentence()">
+        <option value="">-- Select a Word --</option>
+        <option value="Throttle" data-sentence="A throttle controls the engine power of a fighter jet.">Throttle</option>
+        <option value="Afterburner" data-sentence="An afterburner gives a jet extra thrust for high speed flight.">Afterburner</option>
+        <option value="Cockpit" data-sentence="The cockpit is where the pilot sits and controls the jet.">Cockpit</option>
+        <option value="Mach" data-sentence="Mach is a unit used to measure the speed of a jet.">Mach</option>
+        <option value="Radar" data-sentence="Radar helps a fighter jet detect other aircraft in the sky.">Radar</option>
+        <option value="Missile" data-sentence="A missile is a weapon that can be launched from a fighter jet.">Missile</option>
+        <option value="Ejector" data-sentence="An ejector seat launches the pilot out of the jet in an emergency.">Ejector</option>
+        <option value="Fuselage" data-sentence="The fuselage is the main body of a fighter jet.">Fuselage</option>   
+    </select>
+
+    <button onclick = "sayWord()"> Speak Word</button>
+    <br>
+
+    <textarea id = "sentenceBox" rows="3" cols = "40" readonly> </textarea>
+    <button onclick = "saySentence()">Speak Sentence</button>
+
+    <script src ="dictionary.js"></script>
+</body>
+</html>
