@@ -11,12 +11,12 @@
 
     <h1>F1 Learning App</h1>
 
-    <!-- Menu gets built automatically by JS -->
+    <!-- Menu -->
     <select id="topicMenu">
         <option value="">-- Select a Topic --</option>
     </select>
 
-    <!-- Content area, updates when user picks a topic -->
+    <!--for json -->
     <div id="contentArea">
         <h2 id="topicTitle"></h2>
         <p id="topicDescription"></p>
@@ -25,16 +25,16 @@
         <button id="audioBtn">Play Audio</button>
     </div>
 
-    <a href="../index.html">Return to main page</a>
-
     <script src="app.js"></script>
 
-    <!-- Service worker registration -->
+    <!--service worker part-->
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js');
         }
     </script>
+
+    <!--maybe move-->
     <a href="index.html">Return to main page</a>
 </body>
 </html>
