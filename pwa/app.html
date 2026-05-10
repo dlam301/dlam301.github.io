@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Learning App</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>F1 Learning App</h1>
+
+    <!-- Menu gets built automatically by JS -->
+    <select id="topicMenu">
+        <option value="">-- Select a Topic --</option>
+    </select>
+
+    <!-- Content area, updates when user picks a topic -->
+    <div id="contentArea">
+        <h2 id="topicTitle"></h2>
+        <p id="topicDescription"></p>
+        <img id="topicImage" src="" alt="" />
+        <br>
+        <button id="audioBtn">Play Audio</button>
+    </div>
+
+    <a href="../index.html">Return to main page</a>
+
+    <script src="app.js"></script>
+
+    <!-- Service worker registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+
+</body>
+</html>

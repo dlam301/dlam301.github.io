@@ -1,0 +1,52 @@
+{
+    "f1": [
+        {
+            "title": "Engine",
+            "description": "An F1 engine is a 1.6 litre turbocharged hybrid unit that can rev up to 15,000 RPM. It combines a combustion engine with an energy recovery system to maximize power and efficiency. In years before, it was only combustion engines of V10s and V8s, before a switch to V6 hybrid engines was made for environmental purposes.",
+            "image": "Honda_Racing_Gallery_-_Honda_RA621H.jpg",
+            "audio": "freesound_community-f1-car-passing-66782.mp3"
+        },
+        {
+            "title": "DRS",
+            "description": "DRS stands for Drag Reduction System. It allows drivers to open a flap on their rear wing to reduce drag and increase top speed on designated straight sections of the track. This was introduced in the 2000s, and recently replaced with Overtake mode for the 2026 regulations.",
+            "image": "ferrari-carlos-sainz-drs-open-closed-spanish-grand-prix-planet-f11-1024x577.jpg",
+            "audio": ""
+        },
+        {
+            "title": "Pit Stop",
+            "description": "A pit stop is when a car pulls into the pit lane during a race for fresh tires, repairs, or adjustments. A fast pit stop takes around 2 seconds. The world record is 1.8 seconds, set by McLaren during the 2023 Qatar Race. There used to be refueling as well, but soon stopped after multiple fires.",
+            "image": "Fale_F1_Monza_2004_73.jpg",
+            "audio": ""
+        },
+        {
+            "title": "Downforce",
+            "description": "Downforce is the aerodynamic force that pushes an F1 car into the track. More downforce means more grip in corners but also more drag on straights. Drivers and teams can choose to adjust these settings upon many others for what they believe is the right approach to a track.",
+            "image": "",
+            "audio": ""
+        },
+        {
+            "title": "Safety Car",
+            "description": "The safety car is deployed when there is a dangerous situation on track. All cars must slow down and queue behind it until the track is clear. Before Aston Martins were used, for 2026 however, Mercedes-AMG provides the safety and medical cars.",
+            "image": "F1_safety_cars.jpg",
+            "audio": ""
+        },
+        {
+            "title": "Qualifying",
+            "description": "Qualifying is a session held the day before the race where drivers compete for the fastest lap time to determine their starting position on the grid.",
+            "image": "",
+            "audio": ""
+        },
+        {
+            "title": "Undercut",
+            "description": "The undercut is a race strategy where a driver pits earlier than a rival to get fresh tires, gain lap time, and come out ahead of them.",
+            "image": "",
+            "audio": ""
+        },
+        {
+            "title": "Podium",
+            "description": "The podium is the ceremony after the race where the top three finishers receive their trophies. First place stands on the highest step. These three get the most points of the race.",
+            "image": "FIA_F1_Austria_2022_Podium_Race_(1).jpg",
+            "audio": ""
+        }
+    ]
+}
