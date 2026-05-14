@@ -13,7 +13,12 @@ function buildMenu(topics) {
     topics.forEach(topic => {
         const option = document.createElement('option');
         option.value = topic.title;
-        option.textContent = topic.title;
+
+        if (topic.value) {
+            option.textContent = topic.title;
+        } else {
+            option.textContent = topic.title + "(no audio, has TTS of description)";
+        }
         menu.appendChild(option);
     });
 
@@ -45,20 +50,54 @@ function showContent(topic) {
 
     // audio button
     const audioBtn = document.getElementById('audioBtn');
-    if (topic.audio) {
-        audioBtn.style.display = 'block';
-        audioBtn.onclick = function() {
-            const sound = new Audio(topic.audio);
-            sound.play();
-        };
-    } else {
-        // some dont have audio like downforce and etc, so TTS for description
-        audioBtn.style.display = 'block';
-        audioBtn.onclick = function() {
+    audioBtn.style.display = 'block';
+    audioBtn.textContent = 'Play Audio';
+
+    let currentAudio = null;
+    let isPlaying = false;
+
+    audioBtn.onclick = function() {
+    // If something is already playing, stop it
+        if (isPlaying) {
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }   
+
+            window.speechSynthesis.cancel();
+
+            isPlaying = false;
+            audioBtn.textContent = 'Play Audio';
+            return;
+        }
+
+    // If topic has an audio file, play that
+        if (topic.audio) {
+            currentAudio = new Audio(topic.audio);  
+            currentAudio.play();
+
+            isPlaying = true;
+            audioBtn.textContent = 'Stop Audio';
+
+            currentAudio.onended = function() {
+                isPlaying = false;
+                audioBtn.textContent = 'Play Audio';
+            };
+        } 
+    // If no audio file, use tts
+        else {
             const msg = new SpeechSynthesisUtterance(topic.description);
             window.speechSynthesis.speak(msg);
-        };
-    }
+
+            isPlaying = true;
+            audioBtn.textContent = 'Stop Audio';
+
+            msg.onend = function() {
+                isPlaying = false;
+                audioBtn.textContent = 'Play Audio';
+            };
+        }
+    };
 }
 
 // clear content area when user goes back to default option
