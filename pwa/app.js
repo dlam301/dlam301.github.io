@@ -1,3 +1,7 @@
+    let currentAudio = null;
+    let isPlaying = false;
+
+
 // 1) Load the JSON data when page loads
 fetch('data.json')
     .then(response => response.json())
@@ -14,7 +18,7 @@ function buildMenu(topics) {
         const option = document.createElement('option');
         option.value = topic.title;
 
-        if (topic.value) {
+        if (topic.audio) {
             option.textContent = topic.title;
         } else {
             option.textContent = topic.title + "(no audio, has TTS of description)";
@@ -52,9 +56,6 @@ function showContent(topic) {
     const audioBtn = document.getElementById('audioBtn');
     audioBtn.style.display = 'block';
     audioBtn.textContent = 'Play Audio';
-
-    let currentAudio = null;
-    let isPlaying = false;
 
     audioBtn.onclick = function() {
     // If something is already playing, stop it
