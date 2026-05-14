@@ -1,4 +1,4 @@
-const cacheName = 'f1app-v2.3';
+const cacheName = 'f1app-v2.5';
 
 const staticAssets = [
     './app.html',
@@ -20,6 +20,8 @@ const staticAssets = [
 ];
 
 self.addEventListener('install', event => {
+    self.skipWaiting();
+
     event.waitUntil(
         caches.open(cacheName).then(cache => {
             return cache.addAll(staticAssets);
@@ -37,6 +39,8 @@ self.addEventListener('activate', event => {
                     }
                 })
             );
+        }).then(() => {
+            return self.clients.claim();
         })
     );
 });
