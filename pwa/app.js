@@ -83,7 +83,7 @@ function showContent(topic) {
                 isPlaying = false;
                 audioBtn.textContent = 'Play Audio';
             };
-        } 
+        }
     // If no audio file, use tts
         else {
             const msg = new SpeechSynthesisUtterance(topic.description);
