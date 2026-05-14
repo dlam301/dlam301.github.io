@@ -1,4 +1,4 @@
-const cacheName = 'f1app-v2.1';
+const cacheName = 'f1app-v2.3';
 
 const staticAssets = [
     './app.html',
@@ -23,6 +23,20 @@ self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(cacheName).then(cache => {
             return cache.addAll(staticAssets);
+        })
+    );
+});
+
+self.addEventListener('activate', event => {
+    event.waitUntil(
+        caches.keys().then(cacheNames => {
+            return Promise.all(
+                cacheNames.map(name => {
+                    if (name !== cacheName) {
+                        return caches.delete(name);
+                    }
+                })
+            );
         })
     );
 });
