@@ -1,4 +1,4 @@
-const cacheName = 'f1app-v2';
+const cacheName = 'f1app-v2.1';
 
 const staticAssets = [
     './app.html',
