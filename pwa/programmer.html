@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmer Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Programmer Documentation</h1>
+
+    <h2>How the App Works</h2>
+    <p>
+        The app uses app.html for the page structure, style.css for visual styling,
+        app.js for interactivity, data.json for topic content, manifest.json for PWA
+        installation settings, and sw.js for offline caching.
+    </p>
+
+    <h2>Main Files</h2>
+    <ul>
+        <li>app.html: creates the main structure of the app page</li>
+        <li>style.css: controls colors, spacing, fonts, and layout</li>
+        <li>app.js: loads the JSON file and updates the page when a topic is selected</li>
+        <li>data.json: stores all Formula 1 topic information</li>
+        <li>manifest.json: provides install settings for the PWA</li>
+        <li>sw.js: caches app files so the app can work offline</li>
+    </ul>
+
+    <h2>How to Add a New Topic</h2>
+    <p>
+        All learning content is stored in data.json. To add a new topic, open data.json
+        and add a new object inside the f1 array.
+    </p>
+
+    <pre>
+{
+    "title": "Your Topic Title",
+    "description": "Your description here.",
+    "image": "your_image_filename.jpg",
+    "audio": "your_audio_filename.mp3"
+}
+    </pre>
+
+    <h2>JSON Field Explanations</h2>
+    <ul>
+        <li>The title field controls the name shown in the dropdown menu.</li>
+        <li>The description field controls the text displayed on the page.</li>
+        <li>The image field controls which image appears for that topic.</li>
+        <li>The audio field controls which audio file plays for that topic.</li>
+    </ul>
+
+    <h2>Notes for Editing</h2>
+    <ul>
+        <li>The image field can be left as empty quotes "" if no image is available.</li>
+        <li>The audio field can be left as empty quotes "" if no audio file is available.</li>
+        <li>If the audio field is empty, the app uses text-to-speech instead.</li>
+        <li>Image and audio files should be placed in the same folder as app.html unless the file path is changed.</li>
+        <li>Any new files that should work offline should also be added to the staticAssets list in sw.js.</li>
+        <li>If major changes are made, the cache name in sw.js can be updated to force the browser to refresh cached files.</li>
+    </ul>
+
+    <a href="app.html">Open the App</a>
+    <a href="documentation.html">User Documentation</a>
+    <a href="promo.html">Promo Page</a>
+    <a href="../index.html">Return to main page</a>
+</body>
+</html>
